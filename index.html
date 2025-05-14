@@ -22,9 +22,10 @@
     </table>
     <form id="guessForm">
         <button type="button" id="resetButton" onclick="Start()">New Game</button>
-        <input type="number" id="guessInput" placeholder="Enter 4 non-repeating digits">
+        <input type="number" id="guessInput" placeholder="Enter 4 non-repeating digits" onfocus="this.value = ''">
         <button type="submit">Guess</button>
-        <p id="errorMessage"></p>
+        <p id="errorMessage"></p> <!-- Error message will appear here -->
+        <p id="winMessage">You win! Congratulations!</p> <!-- Win message -->
     </form>
 </div>
 <script src="script.js"></script>
