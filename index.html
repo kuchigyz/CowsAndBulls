@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cows and Bulls</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="wrapper">
+    <table id="gameResults">
+        <thead>
+        <tr>
+            <th>Try</th>
+            <th>Guess</th>
+            <th>Bulls</th>
+            <th>Cows</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <form id="guessForm">
+        <button type="button" id="resetButton" onclick="Start()">New Game</button>
+        <input type="text" id="guessInput" placeholder="Enter 4 non-repeating digits">
+        <button type="submit">Guess</button>
+        <p id="errorMessage"></p>
+    </form>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Wrapper - Flexbox centered layout */
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the content horizontally */
+    justify-content: flex-start;
+    max-width: 350px;
+    width: 100%;
+    margin: 50px auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Table Styling */
+#gameResults {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    max-height: 300px;
+    overflow-y: auto;
+    display: table;
+}
+
+#gameResults th, #gameResults td {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+    font-family: Arial, sans-serif;
+}
+
+#gameResults thead {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#gameResults tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+#gameResults tbody tr:hover {
+    background-color: #e0e0e0;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px; /* Adds space between table and form */
+}
+
+form input {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    max-width: 250px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+/* Focus effect for input */
+form input:focus {
+    border-color: #4CAF50; /* Green border on focus */
+    outline: none;
+}
+
+/* Button Styling */
+form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 250px;
+}
+
+/* New Game Button Styling */
+form button[type="button"] {
+    background-color: #f44336;
+}
+
+/* Hover Effects for Buttons */
+form button:hover {
+    background-color: #45a049;
+}
+
+form button[type="button"]:hover {
+    background-color: #e53935;
+}
+
+/* Error Message Styling */
+#errorMessage {
+    color: red;
+    margin-top: 10px;
+    font-size: 14px;
+    display: none;
+}
+
+/* Winning Message */
+#winMessage {
+    color: green;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    display: none;
+}
+
+/* Styling for form labels */
+label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Victory Animation */
+@keyframes victoryAnimation {
+    0% { background-color: #4CAF50; }
+    50% { background-color: #81C784; }
+    100% { background-color: #4CAF50; }
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 767px) {
+    #wrapper {
+        height: 100vh;
+        padding: 10px;
+    }
+
+    form input,
+    form button {
+        max-width: 100%;
+    }
+
+    #gameResults {
+        max-height: 50vh; /* Make the table more compact on smaller screens */
+    }
+}
