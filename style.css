@@ -9,9 +9,9 @@
 #wrapper {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centers the content horizontally */
+    align-items: center;
     justify-content: flex-start;
-    max-width: 350px;
+    max-width: 350px; /* Keeps max width for larger screens */
     width: 100%;
     margin: 50px auto;
     padding: 20px;
@@ -70,16 +70,8 @@ form input {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: border-color 0.3s ease;
 }
 
-/* Focus effect for input */
-form input:focus {
-    border-color: #4CAF50; /* Green border on focus */
-    outline: none;
-}
-
-/* Button Styling */
 form button {
     padding: 10px 20px;
     font-size: 16px;
@@ -146,12 +138,14 @@ label {
         padding: 10px;
     }
 
+    /* Ensure form elements are properly sized */
     form input,
     form button {
-        max-width: 100%;
+        max-width: 100%; /* Full width on mobile */
     }
 
+    /* Make the table more compact on smaller screens */
     #gameResults {
-        max-height: 50vh; /* Make the table more compact on smaller screens */
+        max-height: 50vh; /* Adjust the table size */
     }
 }
